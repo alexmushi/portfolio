@@ -79,47 +79,50 @@ let commandList = [
 	{
 		name: ["twitter"],
 		action: true,
-		response: 'Visit: <a href="https://twitter.com/aadityatwt">aadityatwt</a>',
+		response:
+			'Visit: <a href="https://twitter.com/aalexShimanotwt">aalexShimanotwt</a>',
 		subPathStrict: [false],
 		description: "checkout my twitter profile",
-	  },
-	  {
-		name: ["github", "git",".github"],
+	},
+	{
+		name: ["github", "git", ".github"],
 		action: true,
-		response: 'Visit: <a href="https://github.com/adityassharma-ss">my github @adityassharma-ss</a>',
+		response:
+			'Visit: <a href="https://github.com/alexShimanossharma-ss">my github @alexShimanossharma-ss</a>',
 		subPathStrict: [false],
 		description: "checkout my github profile",
-	  },
-	  {
+	},
+	{
 		name: ["linkedin"],
 		action: true,
-		response: 'Visit: <a href="https://www.linkedin.com/in/aditya-sharma-47b787201/">LinkedIn</a>',
+		response:
+			'Visit: <a href="https://www.linkedin.com/in/alexShimano-sharma-47b787201/">LinkedIn</a>',
 		subPathStrict: [false],
 		description: "checkout mylinkedIn profile",
-	  },
+	},
 	{
 		name: ["projects", "./projects", "projects.app", "./projects.app"],
 		// action: { PROJECTS: "" },
 		action: false,
-		response: 'Page Under Development 🚧🔨 | Until then Visit: <a href="https://minimalinfo.vercel.app/">"minimalinfo" to checkout my projects</a>',
+		response:
+			'Page Under Development 🚧🔨 | Until then Visit: <a href="https://minimalinfo.vercel.app/">"minimalinfo" to checkout my projects</a>',
 		subPathStrict: [false],
 		description: "checkout my projects",
 	},
 	{
 		name: ["whoami"],
 		action: true,
-		response: "Hi there! My name is Aditya Sharma and I am a driven and passionate third year Btech student with a strong foundation in programming languages such as Java, C++, and Python. I have also gained valuable experience in cloud computing and DevOps, specifically using tools and technologies like Docker, Kubernetes, and ArgoCD. I am deeply interested in web development and open source projects, and have had the opportunity to work on a number of real-life projects that have allowed me to apply my skills and problem-solving abilities. In my free time, you can find me on my GitHub profile, https://github.com/adityassharma-ss, where I actively contribute to and collaborate on various open source projects. I am always seeking to learn and grow as a developer, and am excited to see where my interests and skills in cloud computing and DevOps will take me in the future. I am eager to apply my knowledge and abilities to meaningful projects and make a positive impact in the tech industry.",
+		response:
+			"Hi there! My name is alexShimano Sharma and I am a driven and passionate third year Btech student with a strong foundation in programming languages such as Java, C++, and Python. I have also gained valuable experience in cloud computing and DevOps, specifically using tools and technologies like Docker, Kubernetes, and ArgoCD. I am deeply interested in web development and open source projects, and have had the opportunity to work on a number of real-life projects that have allowed me to apply my skills and problem-solving abilities. In my free time, you can find me on my GitHub profile, https://github.com/alexShimanossharma-ss, where I actively contribute to and collaborate on various open source projects. I am always seeking to learn and grow as a developer, and am excited to see where my interests and skills in cloud computing and DevOps will take me in the future. I am eager to apply my knowledge and abilities to meaningful projects and make a positive impact in the tech industry.",
 		subPathStrict: [false],
-		description:
-			"displays my information",
+		description: "displays my information",
 	},
 	{
 		name: ["fetchme"],
 		action: false,
 		response: `<pre>${neofetch}</pre>`,
 		subPathStrict: [false],
-		description:
-			"fetches my information in a cool way", 
+		description: "fetches my information in a cool way",
 	},
 	{
 		name: ["code"],
@@ -142,7 +145,7 @@ let commandList = [
 		subPathStrict: [true, { name: "log", response: "" }],
 		description: "lists my github projects",
 	},
-	
+
 	{
 		name: ["help"],
 		action: true,
@@ -162,13 +165,13 @@ commandList = commandList.map(item => {
 const fileList = [
 	{
 		name: ".github",
-		link: "https://github.com/adityassharma-ss",
+		link: "https://github.com/alexShimanossharma-ss",
 		folder: true,
 		executable: false,
 	},
 	{
 		name: "src",
-		link: "https://github.com/boidushya/aditya",
+		link: "https://github.com/boidushya/alexShimano",
 		folder: true,
 		executable: false,
 	},

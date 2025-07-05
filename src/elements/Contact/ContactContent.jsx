@@ -72,7 +72,7 @@ const ResumeContent = () => {
 				<MainSection>
 					<li>
 						<a
-							href="https://twitter.com/aadityatwt"
+							href="https://twitter.com/aalexShimanotwt"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -90,7 +90,7 @@ const ResumeContent = () => {
 					</li>
 					<li>
 						<a
-							href="https://www.linkedin.com/in/adityasharma23/"
+							href="https://www.linkedin.com/in/alexShimanosharma23/"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -106,9 +106,9 @@ const ResumeContent = () => {
 							</svg>
 						</a>
 					</li>
-                    <li>
+					<li>
 						<a
-							href="https://github.com/adityassharma-ss"
+							href="https://github.com/alexShimanossharma-ss"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -126,7 +126,7 @@ const ResumeContent = () => {
 					</li>
 					<li>
 						<a
-							href="mailto:adityashf7@gmail.com?subject=Hi Aditya!&amp;body=I'm coming from your website, are you up for a chat?"
+							href="mailto:alexShimanoshf7@gmail.com?subject=Hi alexShimano!&amp;body=I'm coming from your website, are you up for a chat?"
 							target="_blank"
 							rel="noreferrer"
 						>

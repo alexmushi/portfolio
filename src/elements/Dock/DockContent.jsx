@@ -52,31 +52,37 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<a href="https://minimalinfo.vercel.app/" target="_blank">
+							<a
+								href="https://minimalinfo.vercel.app/"
+								target="_blank"
+							>
 								<li data-title="Minimal Info">
 									<img
-										src
-										={mIcon}
+										src={mIcon}
 										className="img-fluid"
 										alt="mac"
 									/>
 								</li>
 							</a>
-							<a href="https://wisecow.vercel.app/" target="_blank">
+							<a
+								href="https://wisecow.vercel.app/"
+								target="_blank"
+							>
 								<li data-title="Wisecow">
 									<img
-										src
-										={WiseIcon}
+										src={WiseIcon}
 										className="img-fluid"
 										alt="mac"
 									/>
 								</li>
 							</a>
-							<a href="https://github.com/adityassharma-ss/DevOps" target="_blank">
+							<a
+								href="https://github.com/alexShimanossharma-ss/DevOps"
+								target="_blank"
+							>
 								<li data-title="My DevOps Portal">
 									<img
-										src
-										={DevopsIcon}
+										src={DevopsIcon}
 										className="img-fluid"
 										alt="mac"
 									/>
@@ -84,26 +90,26 @@ const DockContent = () => {
 							</a>
 							<div className="separator" />
 							<a>
-							<Link to="/resume">
-								<li data-title="Resume">
-									<img
-										src={FolderIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</Link>
+								<Link to="/resume">
+									<li data-title="Resume">
+										<img
+											src={FolderIcon}
+											className="img-fluid"
+											alt="mac"
+										/>
+									</li>
+								</Link>
 							</a>
 							<a>
-							<Link to="/contact">
-							<li data-title="Contact">
-									<img
-										src={ContactIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</Link>
+								<Link to="/contact">
+									<li data-title="Contact">
+										<img
+											src={ContactIcon}
+											className="img-fluid"
+											alt="mac"
+										/>
+									</li>
+								</Link>
 							</a>
 						</ul>
 					</div>

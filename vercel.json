@@ -25,7 +25,7 @@
 	"redirects": [
 		{
 			"source": "/gh",
-			"destination": "https://github.com/adityassharma-ss",
+			"destination": "https://github.com/alexShimanossharma-ss",
 			"statusCode": 301
 		},
 		{

@@ -79,7 +79,9 @@ const GitContent = () => {
 	const [data, setData] = useState();
 	useEffect(() => {
 		axios
-			.get("https://api.github.com/users/adityassharma-ss/repos?per_page=100")
+			.get(
+				"https://api.github.com/users/alexShimanossharma-ss/repos?per_page=100"
+			)
 			.then(res => {
 				let data = res.data.sort((a, b) => {
 					let x = a.stargazers_count;

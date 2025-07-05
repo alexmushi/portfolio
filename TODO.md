@@ -10,4 +10,4 @@
 -   [x] help command auto complete for first time users
 -   [x] uname
 -   [x] whoami
--   [x] [menu bar](https://github.com/adityassharma-ss/aditya/pull/6)
+-   [x] [menu bar](https://github.com/alexShimanossharma-ss/alexShimano/pull/6)

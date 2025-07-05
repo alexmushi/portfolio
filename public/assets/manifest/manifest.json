@@ -1,6 +1,6 @@
 {
 	"short_name": "Portfolio",
-	"name": "Aditya's Portfolio Website",
+	"name": "alexShimano's Portfolio Website",
 	"icons": [
 		{
 			"src": "/assets/favicon/android-chrome-192x192.png",
@@ -17,6 +17,6 @@
 	"display": "standalone",
 	"theme_color": "#000000",
 	"background_color": "#ffffff",
-	"permissions": ["https://aditya.com"],
-	"host_permissions": ["https://aditya.com/*"]
+	"permissions": ["https://alexShimano.com"],
+	"host_permissions": ["https://alexShimano.com/*"]
 }

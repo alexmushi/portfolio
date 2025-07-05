@@ -9,17 +9,17 @@ const Iframe = styled.iframe`
 `;
 
 const ResumeContent = ({ title, content }) => {
-    return (
-        <BodyContent>
-           <iframe src="https://drive.google.com/file/d/1SH_lZGXx4qAJN128_Q18yNozmpMIjcyF/preview"
-           width="100%"
-           height="100%"
-           frameborder="0"
-           title="Aditya's Resume"
-           >
-           </iframe>
-        </BodyContent>
-    );
+	return (
+		<BodyContent>
+			<iframe
+				src="https://drive.google.com/file/d/1SH_lZGXx4qAJN128_Q18yNozmpMIjcyF/preview"
+				width="100%"
+				height="100%"
+				frameborder="0"
+				title="alexShimano's Resume"
+			></iframe>
+		</BodyContent>
+	);
 };
 
 export default ResumeContent;
