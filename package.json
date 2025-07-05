@@ -1,6 +1,6 @@
 {
 	"name": "client",
-	"homepage": "https://alexmushi.github.io/",
+	"homepage": "https://alexmushi.github.io/portfolio/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
