@@ -13,7 +13,7 @@ import Contact from "@components/Contact";
 
 const Routes = () => {
 	return (
-		<Router>
+        <Router basename={process.env.PUBLIC_URL}>
 			<Switch>
 				<Route path="/" exact component={Window} />
 				<Route path="/danger-zone" exact component={Danger} />
