@@ -118,7 +118,7 @@ let commandList = [
 
 commandList = commandList.map(item => {
 	if (item.name[0] === "help") {
-		item.response = `<pre>${compileCommandHTML(commandList)}</pre>`;
+		item.response = `<pre>${compileCommandHTML(commandList)}</pre><br><span class="style1">Thanks to <a href="https://github.com/adityassharma-ss/aditya" target="_blank">adityassharma</a> for the portfolio template</span>`;
 	}
 	return item;
 });
