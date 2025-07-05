@@ -80,7 +80,7 @@ let commandList = [
 		name: ["github", "git", ".github"],
 		action: true,
 		response:
-			'Visit: <a href="https://github.com/alexShimanossharma-ss">my github @alexShimanossharma-ss</a>',
+			'Visit: <a href="https://github.com/alexmushi/">my github @alexmushi</a>',
 		subPathStrict: [false],
 		description: "checkout my github profile",
 	},
@@ -88,7 +88,7 @@ let commandList = [
 		name: ["linkedin"],
 		action: true,
 		response:
-			'Visit: <a href="https://www.linkedin.com/in/alexShimano-sharma-47b787201/">LinkedIn</a>',
+			'Visit: <a href="https://www.linkedin.com/in/alejandro-mu%C3%B1oz-shimano-867740334/">LinkedIn</a>',
 		subPathStrict: [false],
 		description: "checkout my linkedIn profile",
 	},
@@ -105,7 +105,7 @@ let commandList = [
 		name: ["whoami"],
 		action: true,
 		response:
-			"Hi there! My name is alexShimano Sharma and I am a driven and passionate third year Btech student with a strong foundation in programming languages such as Java, C++, and Python. I have also gained valuable experience in cloud computing and DevOps, specifically using tools and technologies like Docker, Kubernetes, and ArgoCD. I am deeply interested in web development and open source projects, and have had the opportunity to work on a number of real-life projects that have allowed me to apply my skills and problem-solving abilities. In my free time, you can find me on my GitHub profile, https://github.com/alexShimanossharma-ss, where I actively contribute to and collaborate on various open source projects. I am always seeking to learn and grow as a developer, and am excited to see where my interests and skills in cloud computing and DevOps will take me in the future. I am eager to apply my knowledge and abilities to meaningful projects and make a positive impact in the tech industry.",
+			"Hi there! My name is Alejandro Muñoz Shimano and I am a Computer Technologies Engineering student at ITESM, and I am currently studying a Master's degree in Information Technology in Cyber Security. I am a creative, persistent person with strong leadership skills, capable of building solid relationships and communicating effectively within multidisciplinary teams. I enjoy self-directed learning and am always looking for new ways to grow and add value. I currently apply these skills in software development and technology projects with a focus on quality, efficiency, and user experience.",
 		subPathStrict: [false],
 		description: "displays my information",
 	},
