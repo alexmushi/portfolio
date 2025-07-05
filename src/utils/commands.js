@@ -92,15 +92,13 @@ let commandList = [
 		subPathStrict: [false],
 		description: "checkout my linkedIn profile",
 	},
-	{
-		name: ["projects", "./projects", "projects.app", "./projects.app"],
-		// action: { PROJECTS: "" },
-		action: false,
-		response:
-			'Page Under Development 🚧🔨 | Until then Visit: <a href="https://minimalinfo.vercel.app/">"minimalinfo" to checkout my projects</a>',
-		subPathStrict: [false],
-		description: "checkout my projects",
-	},
+    {
+        name: ["projects", "./projects", "projects.app", "./projects.app"],
+        action: { PROJECTS: "" },
+        response: "",
+        subPathStrict: [false],
+        description: "checkout my projects",
+    },
 	{
 		name: ["whoami"],
 		action: true,
