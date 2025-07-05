@@ -34,6 +34,17 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
+							<a>
+								<Link to="/projects">
+									<li data-title="Projects">
+										<img
+											src={FinderIcon}
+											className="img-fluid"
+											alt="mac"
+										/>
+									</li>
+								</Link>
+							</a>
 							<div className="separator" />
 							<a>
 								<Link to="/resume">

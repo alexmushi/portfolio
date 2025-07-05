@@ -34,8 +34,8 @@ const MainSection = styled.ol`
     color: #c9cbdb;
     text-decoration: none;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
   }
 
@@ -62,12 +62,18 @@ const MainSection = styled.ol`
     vertical-align: baseline;
     font-weight: 600;
   }
+
+  p {
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    color: #a7a7a7;
+  }
 `;
 
 const projects = [
-  { name: "Notarías 38 y 76", link: "https://www.notarias38y76.com/" },
-  { name: "Saca la bici", link: "https://play.google.com/store/apps/details?id=com.kotlin.sacalabici&pcampaignid=web_share" },
-  { name: "ViaPago", link: "https://www.youtube.com/watch?v=30KhGPoSm20&ab_channel=Aleyuki" },
+  { name: "Notarías 38 y 76", description: "An online portal for Notarías 38 y 76 in Querétaro that enables clients to start legal processes online and upload documents for lawyer review, reducing the need for in-person visits and saving 30,000 sheets of paper each month.", link: "https://www.notarias38y76.com/" },
+  { name: "Saca la Bici", description: "Mobile app for Saca la Bici focused on promoting sustainable urban mobility through safe routes and cycling activities in Querétaro. Some of the main functionalities include a social media platform for announcements and events and a map to plan and see in real time the routes.", link: "https://play.google.com/store/apps/details?id=com.kotlin.sacalabici&pcampaignid=web_share" },
+  { name: "ViaPago", description: "Viapago is a payment portal designed to be efficient, maintainable, and intuitive. Its main purpose is to consolidate the financial information management for the Via Diseño's (a university in Querétaro) administration, facilitate access to this information for students, and streamline related processes for both.", link: "https://www.youtube.com/watch?v=30KhGPoSm20&ab_channel=Aleyuki" },
 ];
 
 const ProjectsContent = () => {
@@ -80,6 +86,7 @@ const ProjectsContent = () => {
               <li key={p.name}>
                 <a href={p.link} target="_blank" rel="noreferrer">
                   <span>{p.name}</span>
+                  <p>{p.description}</p>
                 </a>
               </li>
             ))}
