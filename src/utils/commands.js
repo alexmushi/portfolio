@@ -33,14 +33,6 @@ const getSpaces = commandList => {
 const compileCommandHTML = commandList => {
 	let defArgs = [
 		{
-			name: "ls",
-			description: "lists directory content",
-		},
-		{
-			name: "cd",
-			description: "changes the current working directory",
-		},
-		{
 			name: "clear",
 			description: "clears the terminal screen",
 		},
@@ -76,6 +68,21 @@ let commandList = [
 		subPathStrict: [false],
 		description: "view my resume",
 	},
+    {
+        name: ["projects", "./projects", "projects.app", "./projects.app"],
+        action: { PROJECTS: "" },
+        response: "",
+        subPathStrict: [false],
+        description: "checkout my projects",
+    },
+	{
+		name: ["whoami"],
+		action: true,
+		response:
+		"Hi! I’m Alejandro Muñoz Shimano from Querétaro, México. I’m studying Computer Technologies Engineering at ITESM and a Master’s in Information Technology in Cybersecurity at Macquarie Uni. I’m a creative and persistent person with strong leadership skills, able to build solid relationships and communicate effectively in multidisciplinary teams. I enjoy learning on my own initiative and constantly look for ways to grow and add value. Currently, I apply these skills in software development and technology projects, focusing on quality, efficiency, and delivering a great user experience.",
+		subPathStrict: [false],
+		description: "displays my information",
+	},
 	{
 		name: ["github", "git", ".github"],
 		action: true,
@@ -91,21 +98,6 @@ let commandList = [
 			'Visit: <a href="https://www.linkedin.com/in/alejandro-mu%C3%B1oz-shimano-867740334/">LinkedIn</a>',
 		subPathStrict: [false],
 		description: "checkout my linkedIn profile",
-	},
-    {
-        name: ["projects", "./projects", "projects.app", "./projects.app"],
-        action: { PROJECTS: "" },
-        response: "",
-        subPathStrict: [false],
-        description: "checkout my projects",
-    },
-	{
-		name: ["whoami"],
-		action: true,
-		response:
-			"Hi there! My name is Alejandro Muñoz Shimano and I am a Computer Technologies Engineering student at ITESM, and I am currently studying a Master's degree in Information Technology in Cyber Security. I am a creative, persistent person with strong leadership skills, capable of building solid relationships and communicating effectively within multidisciplinary teams. I enjoy self-directed learning and am always looking for new ways to grow and add value. I currently apply these skills in software development and technology projects with a focus on quality, efficiency, and user experience.",
-		subPathStrict: [false],
-		description: "displays my information",
 	},
 	{
 		name: ["fetchme"],

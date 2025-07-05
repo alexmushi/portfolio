@@ -6,7 +6,7 @@ const Zone = lazy(() => import("@elements/Danger/Zone"));
 
 const VSCode = () => {
 	return (
-		<Default heading="Avicii - The Nights (Official Music Video)" programName="YouTube">
+		<Default heading="Never Gonna Give You Up" programName="YouTube">
 			<Suspense fallback={<Loader />}>
 				<Zone />
 			</Suspense>
