@@ -65,7 +65,7 @@ Type <span class="style2">'help'</span> to see this list.\n\n`;
 		let temp = `<span class="style2">${item.name}</span>${spaceList[idx]}${item.description}\n`;
 		response += temp;
 	});
-	return `${response}\nAnd more "hidden" commands...`;
+	return response;
 };
 
 let commandList = [
@@ -75,14 +75,6 @@ let commandList = [
 		response: "",
 		subPathStrict: [false],
 		description: "view my resume",
-	},
-	{
-		name: ["twitter"],
-		action: true,
-		response:
-			'Visit: <a href="https://twitter.com/aalexShimanotwt">aalexShimanotwt</a>',
-		subPathStrict: [false],
-		description: "checkout my twitter profile",
 	},
 	{
 		name: ["github", "git", ".github"],
@@ -98,7 +90,7 @@ let commandList = [
 		response:
 			'Visit: <a href="https://www.linkedin.com/in/alexShimano-sharma-47b787201/">LinkedIn</a>',
 		subPathStrict: [false],
-		description: "checkout mylinkedIn profile",
+		description: "checkout my linkedIn profile",
 	},
 	{
 		name: ["projects", "./projects", "projects.app", "./projects.app"],
@@ -123,27 +115,6 @@ let commandList = [
 		response: `<pre>${neofetch}</pre>`,
 		subPathStrict: [false],
 		description: "fetches my information in a cool way",
-	},
-	{
-		name: ["code"],
-		action: true,
-		response: "",
-		subPathStrict: [true, { name: ".", response: "" }],
-		description: "opens a VS code window for this website's source code",
-	},
-	{
-		name: ["happiness"],
-		action: true,
-		response: "",
-		subPathStrict: [false],
-		description: '<span class="">close your Eyes</span>',
-	},
-	{
-		name: ["git"],
-		action: true,
-		response: "",
-		subPathStrict: [true, { name: "log", response: "" }],
-		description: "lists my github projects",
 	},
 
 	{

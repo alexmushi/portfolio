@@ -34,60 +34,6 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<Link to="/vscode">
-								<li data-title="VS Code">
-									<img
-										src={CodeIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</Link>
-							<Link to="/git">
-								<li data-title="Git Log">
-									<img
-										src={GithubIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</Link>
-							<a
-								href="https://minimalinfo.vercel.app/"
-								target="_blank"
-							>
-								<li data-title="Minimal Info">
-									<img
-										src={mIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</a>
-							<a
-								href="https://wisecow.vercel.app/"
-								target="_blank"
-							>
-								<li data-title="Wisecow">
-									<img
-										src={WiseIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</a>
-							<a
-								href="https://github.com/alexShimanossharma-ss/DevOps"
-								target="_blank"
-							>
-								<li data-title="My DevOps Portal">
-									<img
-										src={DevopsIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</a>
 							<div className="separator" />
 							<a>
 								<Link to="/resume">
