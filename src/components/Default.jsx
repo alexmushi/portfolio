@@ -11,20 +11,29 @@ import { css } from "styled-components";
 import { useLocation } from "react-router-dom";
 
 const Wrapper = styled.div`
-	display: grid;
-	place-items: center;
-	min-height: 100vh;
-	background: url(${bg}) no-repeat center center;
-	background-size: cover;
-	overflow: hidden;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background: url(${bg}) no-repeat center center;
+        background-size: cover;
+        overflow-x: hidden;
+        overflow-y: auto;
 `;
 
 const dimensionConstraints = css`
-	width: 75%;
-	min-width: 70%;
-	min-height: 25%;
-	max-height: 90%;
-	max-width: 80%;
+        width: 75%;
+        min-width: 70%;
+        min-height: 25%;
+        max-height: 90%;
+        max-width: 80%;
+
+        @media (max-width: 768px) {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                max-height: 100%;
+        }
 `;
 
 const emulatorDimensions = css`
@@ -36,15 +45,20 @@ const emulatorDimensions = css`
 `;
 
 const Container = styled.div`
-	width: fit-content;
-	border-radius: 0.6rem 0.6rem 0.3rem 0.3rem;
-	box-shadow: ${theme.windowShadow} 0px 1px 4px;
-	resize: ${props => (props.resizable ? `both` : `none`)};
-	overflow: hidden;
-	${props => (!props.isEmulator ? dimensionConstraints : emulatorDimensions)}
-	backdrop-filter: blur(1rem);
-	background: ${theme.bodyBgWithOpacity};
-	${props => props.height && `height: ${props.height}`}
+        width: fit-content;
+        border-radius: 0.6rem 0.6rem 0.3rem 0.3rem;
+        box-shadow: ${theme.windowShadow} 0px 1px 4px;
+        resize: ${props => (props.resizable ? `both` : `none`)};
+        overflow: hidden;
+        ${props => (!props.isEmulator ? dimensionConstraints : emulatorDimensions)}
+        backdrop-filter: blur(1rem);
+        background: ${theme.bodyBgWithOpacity};
+        ${props => props.height && `height: ${props.height}`};
+
+        @media (max-width: 768px) {
+                border-radius: 0;
+                resize: none;
+        }
 `;
 
 const Default = props => {
