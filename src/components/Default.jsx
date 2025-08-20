@@ -16,35 +16,54 @@ const Wrapper = styled.div`
 	min-height: 100vh;
 	background: url(${bg}) no-repeat center center;
 	background-size: cover;
-	overflow: hidden;
+        overflow: hidden;
+        @media (max-width: 768px) {
+                overflow: auto;
+        }
 `;
 
 const dimensionConstraints = css`
-	width: 75%;
-	min-width: 70%;
-	min-height: 25%;
-	max-height: 90%;
-	max-width: 80%;
+        width: 75%;
+        min-width: 70%;
+        min-height: 25%;
+        max-height: 90%;
+        max-width: 80%;
+        @media (max-width: 768px) {
+                width: 95%;
+                min-width: 95%;
+                max-width: 95%;
+                max-height: 90%;
+        }
 `;
 
 const emulatorDimensions = css`
-	width: fit-content;
-	min-width: 20%;
-	min-height: 25%;
-	max-height: 75%;
-	max-width: 80%;
+        width: fit-content;
+        min-width: 20%;
+        min-height: 25%;
+        max-height: 75%;
+        max-width: 80%;
+        @media (max-width: 768px) {
+                width: 95%;
+                min-width: 95%;
+                max-width: 95%;
+                max-height: 90%;
+        }
 `;
 
 const Container = styled.div`
-	width: fit-content;
-	border-radius: 0.6rem 0.6rem 0.3rem 0.3rem;
-	box-shadow: ${theme.windowShadow} 0px 1px 4px;
-	resize: ${props => (props.resizable ? `both` : `none`)};
-	overflow: hidden;
-	${props => (!props.isEmulator ? dimensionConstraints : emulatorDimensions)}
-	backdrop-filter: blur(1rem);
-	background: ${theme.bodyBgWithOpacity};
-	${props => props.height && `height: ${props.height}`}
+        width: fit-content;
+        border-radius: 0.6rem 0.6rem 0.3rem 0.3rem;
+        box-shadow: ${theme.windowShadow} 0px 1px 4px;
+        resize: ${props => (props.resizable ? `both` : `none`)};
+        overflow: hidden;
+        ${props => (!props.isEmulator ? dimensionConstraints : emulatorDimensions)}
+        backdrop-filter: blur(1rem);
+        background: ${theme.bodyBgWithOpacity};
+        ${props => props.height && `height: ${props.height}`}
+        @media (max-width: 768px) {
+                border-radius: 0;
+                height: 90%;
+        }
 `;
 
 const Default = props => {

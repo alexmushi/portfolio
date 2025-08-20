@@ -12,7 +12,7 @@
 	box-sizing: border-box;
 	font-size: 0.875rem;
 	font-weight: 500;
-	top: -1px;
+        top: -1px;
 }
 
 .menu-bar img {
@@ -37,9 +37,9 @@
 	float: right;
   }
   
-  .menu-bar .right-side > div {
-	margin-right: 1rem;
-  }
+.menu-bar .right-side > div {
+        margin-right: 1rem;
+}
   
   .menu-bar .right-side > div img {
 	height: 50%;
@@ -52,21 +52,21 @@
 	padding: 0.2rem;
   }
   
-  .menu-bar .right-side > div:last-child {
-	margin-right: 1.45rem;
-	font-size: 0.875rem;
-  }
+.menu-bar .right-side > div:last-child {
+        margin-right: 1.45rem;
+        font-size: 0.875rem;
+}
   
   .menu-bar .right-side > div .time {
 	margin-left: 0.4em;
   }
   
-  .menu-bar .app-menus,
-  .menu-bar .right-side {
-	height: 100%;
-	display: flex;
-	align-items: center;
-  }
+.menu-bar .app-menus,
+.menu-bar .right-side {
+        height: 100%;
+        display: flex;
+        align-items: center;
+}
   
   .menu-bar .app-menus > div,
   .menu-bar .right-side > div {
@@ -75,9 +75,24 @@
 	vertical-align: top;
   }
   
-  .menu-bar .img-container {
-	height: 100% !important;
-	display: flex !important;
-	align-items: center;
-  }
+.menu-bar .img-container {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center;
+}
+
+@media (max-width: 768px) {
+        .menu-bar {
+                font-size: 0.75rem;
+                padding: 0.25rem;
+        }
+
+        .menu-bar .app-menus > div {
+                margin-left: 0.5rem;
+        }
+
+        .menu-bar .right-side > div {
+                margin-right: 0.5rem;
+        }
+}
   
