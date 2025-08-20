@@ -16,27 +16,27 @@ const DockContent = () => {
 					<span></span>
 					<div className="dock-nav">
 						<ul>
-							<Link to="/">
-								<li
-									data-title="Home"
-									className="full-width-icon"
-								>
-									<img
-										src={TerminalIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</Link>
-								<Link to="/projects">
-									<li data-title="Projects">
-										<img
-											src={FinderIcon}
-											className="img-fluid"
-											alt="mac"
-										/>
-									</li>
-								</Link>
+<Link to="/terminal">
+<li
+data-title="Terminal"
+className="full-width-icon"
+>
+<img
+src={TerminalIcon}
+className="img-fluid"
+alt="mac"
+/>
+</li>
+</Link>
+<Link to="/">
+<li data-title="Projects">
+<img
+src={FinderIcon}
+className="img-fluid"
+alt="mac"
+/>
+</li>
+</Link>
 							<div className="separator" />
 								<Link to="/resume">
 									<li data-title="Resume">

@@ -94,14 +94,13 @@ const Label = styled.label`
 `;
 
 const InputLine = props => {
-	const [val, setVal] = useState("");
-	const { commands, setCommand, path } = useContext(DataContext);
-	const [counter, setCounter] = useState(commands.length);
-	const [typing, setTyping] = useState(false);
-	const [disabled, setDisabled] = useState(false);
-	const inputRef = useRef();
-	const cursorRef = useRef();
-	let alertHidden = localStorage.getItem("hideHelp");
+       const [val, setVal] = useState("");
+       const { commands, setCommand, path, alertHidden } = useContext(DataContext);
+       const [counter, setCounter] = useState(commands.length);
+       const [typing, setTyping] = useState(false);
+       const [disabled, setDisabled] = useState(false);
+       const inputRef = useRef();
+       const cursorRef = useRef();
 	useEffect(() => {
 		if (!disabled) {
 			inputRef.current.focus();
@@ -306,25 +305,31 @@ const Command = props => {
 };
 
 const TerminalContent = () => {
-	const [child, setChild] = useState(1);
-	const [active, setActive] = useState(true);
-	useEffect(() => {
-		setActive(true);
-	}, [active]);
-	return (
-		<BodyContent>
-			<Wrapper>
-				{Array.from(Array(child).keys()).map(i => (
-					<Command
-						setChild={setChild}
-						setActive={setActive}
-						child={child}
-						key={i === 0 ? active && i : i}
-					/>
-				))}
-			</Wrapper>
-		</BodyContent>
-	);
+       const [child, setChild] = useState(1);
+       const [active, setActive] = useState(true);
+       const { setAlertHidden } = useContext(DataContext);
+
+       useEffect(() => {
+               setAlertHidden(false);
+       }, [setAlertHidden]);
+
+       useEffect(() => {
+               setActive(true);
+       }, [active]);
+       return (
+               <BodyContent>
+                       <Wrapper>
+                               {Array.from(Array(child).keys()).map(i => (
+                                       <Command
+                                               setChild={setChild}
+                                               setActive={setActive}
+                                               child={child}
+                                               key={i === 0 ? active && i : i}
+                                       />
+                               ))}
+                       </Wrapper>
+               </BodyContent>
+       );
 };
 
 export default TerminalContent;

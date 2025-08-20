@@ -131,20 +131,18 @@ const AlertContent = ({ type }) => {
 		img.onload = () => setSource(things);
 		//eslint-disable-next-line
 	}, []);
-	useEffect(() => {
-		if (alertHidden) {
-			containerRef.current.classList.remove("showAlert");
-			localStorage.setItem(`alert__${type}`, true);
-		}
-		//eslint-disable-next-line
-	}, [alertHidden]);
-	useEffect(() => {
-		let help = localStorage.getItem(`alert__${type}`);
-		if (!help && source && !alertHidden) {
-			containerRef.current.classList.add("showAlert");
-		}
-		//eslint-disable-next-line
-	}, [source]);
+       useEffect(() => {
+               if (alertHidden) {
+                       containerRef.current.classList.remove("showAlert");
+               }
+               //eslint-disable-next-line
+       }, [alertHidden]);
+       useEffect(() => {
+               if (source && !alertHidden) {
+                       containerRef.current.classList.add("showAlert");
+               }
+               //eslint-disable-next-line
+       }, [source, alertHidden]);
 	useEffect(() => {
 		const startTime = new Date();
 		let shakeInterval = 15;

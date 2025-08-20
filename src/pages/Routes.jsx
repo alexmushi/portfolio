@@ -12,19 +12,20 @@ import Contact from "@components/Contact";
 
 
 const Routes = () => {
-	return (
-        <Router basename={process.env.PUBLIC_URL}>
-			<Switch>
-				<Route path="/" exact component={Window} />
-				<Route path="/danger-zone" exact component={Danger} />
-				<Route path="/vscode" exact component={VSCode} />
-				<Route path="/resume" exact component={Resume} />
-				<Route path="/git" exact component={Git} />
-				<Route path="/projects" exact component={Projects} />
-				<Route path="/contact" exact component={Contact} />
-			</Switch>
-		</Router>
-	);
+        return (
+       <Router basename={process.env.PUBLIC_URL}>
+                       <Switch>
+                               <Route path="/" exact component={Projects} />
+                               <Route path="/terminal" exact component={Window} />
+                               <Route path="/danger-zone" exact component={Danger} />
+                               <Route path="/vscode" exact component={VSCode} />
+                               <Route path="/resume" exact component={Resume} />
+                               <Route path="/git" exact component={Git} />
+                               <Route path="/projects" exact component={Projects} />
+                               <Route path="/contact" exact component={Contact} />
+                       </Switch>
+               </Router>
+        );
 };
 
 export default Routes;

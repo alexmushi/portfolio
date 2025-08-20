@@ -57,9 +57,11 @@ const Default = props => {
 	return (
 		<>
 			<MenuContent programName={props.programName} />
-			<AlertContent
-				type={pathname.includes("qemu") ? `qemu` : `hideHelp`}
-			/>
+{(props.programName === "Terminal" || pathname.includes("qemu")) && (
+<AlertContent
+type={pathname.includes("qemu") ? `qemu` : `hideHelp`}
+/>
+)}
 			<Wrapper>
 				<Draggable
 					bounds={{
