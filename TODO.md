@@ -11,3 +11,6 @@
 -   [x] uname
 -   [x] whoami
 -   [x] [menu bar](https://github.com/alexShimanossharma-ss/alexShimano/pull/6)
+-   [ ] Projects como default
+-   [ ] Agregar videos a cada proyecto
+-   [ ] Traducir videos a ingles (AI?)
