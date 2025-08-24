@@ -6,6 +6,7 @@ import Draggable from "react-draggable";
 import bg from "@static/bg5original.jpg";
 import theme from "@styles/theme";
 import AlertContent from "@elements/Alert/AlertContent";
+import DockContent from "@elements/Dock/DockContent";
 import MenuContent from "@elements/Menu/MenuContent";
 import { useLocation } from "react-router-dom";
 
@@ -92,6 +93,7 @@ const Default = (props) => {
           </Container>
         </Draggable>
       </Wrapper>
+      <DockContent />
       <Footer>Simple component</Footer>
     </>
   );
