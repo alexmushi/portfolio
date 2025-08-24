@@ -2,7 +2,6 @@ import React from "react";
 // eslint-disable-next-line
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Window from "../components/Window";
 import Danger from "../components/Danger";
 import VSCode from "../components/VSCode";
 import Resume from "../components/Resume";
@@ -15,7 +14,7 @@ const Routes = () => {
 	return (
         <Router basename={process.env.PUBLIC_URL}>
 			<Switch>
-				<Route path="/" exact component={Window} />
+				<Route path="/" exact component={Projects} />
 				<Route path="/danger-zone" exact component={Danger} />
 				<Route path="/vscode" exact component={VSCode} />
 				<Route path="/resume" exact component={Resume} />
