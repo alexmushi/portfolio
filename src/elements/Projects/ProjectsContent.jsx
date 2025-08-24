@@ -78,11 +78,11 @@ const MainSection = styled.ol`
 `;
 
 const ProjectIcon = styled.img`
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 0.5rem;
   background: #fff;
-  padding: 0.2rem;
+  padding: 0rem;
   box-sizing: border-box;
   flex-shrink: 0;
   object-fit: contain;
