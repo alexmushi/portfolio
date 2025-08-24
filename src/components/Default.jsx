@@ -17,13 +17,15 @@ const Wrapper = styled.div`
 	background: url(${bg}) no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
+	padding-bottom: 5rem; /* Add space for the dock */
+	box-sizing: border-box;
 `;
 
 const dimensionConstraints = css`
 	width: 75%;
 	min-width: 70%;
 	min-height: 25%;
-	max-height: 90%;
+	max-height: calc(90vh - 5rem); /* Account for dock space */
 	max-width: 80%;
 `;
 

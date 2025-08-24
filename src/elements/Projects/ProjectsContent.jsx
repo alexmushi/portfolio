@@ -18,28 +18,38 @@ const Wrapper = styled.div`
   border: 1px solid ${theme.bodyBorder};
   align-items: flex-start;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0 6rem 0; /* Add bottom padding for dock space */
   overflow-y: auto;
+  
+  @media (min-width: 768px) {
+    padding: 1rem 0 6rem 0;
+  }
 `;
 
 const Container = styled.div`
   position: relative;
-  width: clamp(25rem, 50rem, 90vw);
+  width: 100%;
   max-width: 60rem;
+  padding: 0 0.5rem;
   
-  @media (max-width: 767px) {
-    width: 95vw;
+  @media (min-width: 768px) {
+    width: clamp(30rem, 80vw, 60rem);
+    padding: 0 1rem;
   }
 `;
 
 const SectionHeader = styled.h2`
   color: #c9cbdb;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
-  padding: 0 1rem;
+  padding: 0;
   border-left: 4px solid #2a69c2;
   padding-left: 1rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const AboutSection = styled.div`
@@ -47,25 +57,36 @@ const AboutSection = styled.div`
   box-shadow: inset 0 0 0.1em rgb(255 255 255 / 50%);
   border: solid 1px rgba(40, 40, 40, 0.175);
   border-radius: 0.5rem;
-  margin: 1.25rem 1rem;
-  padding: 1.5rem;
+  margin: 0.75rem 0;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    margin: 1.25rem 0;
+    padding: 1.5rem;
+  }
 
   p {
     color: #c9cbdb;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     margin: 0;
+    
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
 
 const ProjectsGrid = styled.div`
   display: grid;
-  gap: 1.5rem;
-  margin: 1.25rem 1rem;
+  gap: 1rem;
+  margin: 0.75rem 0;
   grid-template-columns: 1fr;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+    margin: 1.25rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 
   @media (min-width: 1200px) {
