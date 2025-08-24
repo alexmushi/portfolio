@@ -12,6 +12,13 @@ $img-padding: 0.5rem;
 	margin-bottom: 0.5rem;
 	z-index: 1000;
 	pointer-events: none; /* Allow clicking through the container */
+	
+	/* Mobile optimization */
+	@media screen and (max-width: 768px) {
+		bottom: 0;
+		margin-bottom: 0.25rem;
+		padding-bottom: env(safe-area-inset-bottom);
+	}
 }
 
 .main-contain .dock-nav {
@@ -23,6 +30,12 @@ $img-padding: 0.5rem;
 	border-radius: 0.75rem;
 	backdrop-filter: blur(5px);
 	pointer-events: auto; /* Re-enable pointer events for the nav */
+	
+	/* Mobile optimization */
+	@media screen and (max-width: 768px) {
+		background: rgba(200, 200, 200, 0.4);
+		backdrop-filter: blur(8px);
+	}
 }
 
 .main-contain .dock-nav ul {
