@@ -106,7 +106,7 @@ const ProjectCard = styled.div`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 85%;
   animation: fadeInUp 0.6s ease-out;
   animation-delay: ${props => props.index * 0.1}s;
   animation-fill-mode: both;
@@ -216,8 +216,8 @@ const ActionButton = styled.a`
   background: ${props => props.primary ? '#2a69c2' : 'transparent'};
   color: ${props => props.primary ? '#fff' : '#c9cbdb'};
   border: 1px solid ${props => props.primary ? '#2a69c2' : '#555'};
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.4rem;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
