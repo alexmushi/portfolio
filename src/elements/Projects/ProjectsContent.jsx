@@ -18,11 +18,16 @@ const Wrapper = styled.div`
   border: 1px solid ${theme.bodyBorder};
   align-items: flex-start;
   justify-content: center;
-  padding: 0.5rem 0 6rem 0; /* Add bottom padding for dock space */
+  padding: 0.5rem 0 5rem 0; /* Bottom padding for dock space */
   overflow-y: auto;
   
   @media (min-width: 768px) {
     padding: 1rem 0 6rem 0;
+  }
+  
+  /* Ensure sufficient bottom padding on small screens */
+  @media (max-width: 767px) {
+    padding-bottom: 5rem; /* Increased for mobile dock clearance */
   }
 `;
 
