@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   flex: 1;
   max-width: 100%;
   height: 100%;
+  height: auto;
   border-radius: 0 0 0.6rem 0.6rem;
   border: 1px solid ${theme.bodyBorder};
   align-items: flex-start;
