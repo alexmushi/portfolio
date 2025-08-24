@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 	background: url(${bg}) no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
-	padding-bottom: 5rem; /* Add space for the dock */
+	padding-bottom: 2rem; /* Add space for the dock */
 	box-sizing: border-box;
 	
 	/* Mobile fullscreen optimization */
