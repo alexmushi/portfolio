@@ -2,7 +2,7 @@ $img-dim: 1.5rem;
 $img-padding: 0.5rem;
 
 .main-contain .dock {
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
 	text-align: center;
 	display: flex;
@@ -10,19 +10,32 @@ $img-padding: 0.5rem;
 	width: 100%;
 	left: 0;
 	margin-bottom: 0.5rem;
+	z-index: 1000;
+	pointer-events: none; /* Allow clicking through the container */
+	
+	/* Mobile optimization */
+	@media screen and (max-width: 768px) {
+		bottom: 0;
+		margin-bottom: 0.25rem;
+		padding-bottom: env(safe-area-inset-bottom);
+	}
 }
 
 .main-contain .dock-nav {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 0px;
+	position: relative;
 	width: fit-content;
 	display: block;
 	background: rgba(200, 200, 200, 0.3);
 	box-shadow: inset 0 0 0.15em rgba(200, 200, 200, 0.45);
 	border-radius: 0.75rem;
 	backdrop-filter: blur(5px);
+	pointer-events: auto; /* Re-enable pointer events for the nav */
+	
+	/* Mobile optimization */
+	@media screen and (max-width: 768px) {
+		background: rgba(200, 200, 200, 0.4);
+		backdrop-filter: blur(8px);
+	}
 }
 
 .main-contain .dock-nav ul {

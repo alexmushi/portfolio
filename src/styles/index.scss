@@ -12,6 +12,34 @@ body {
 	padding: 0;
 }
 
+html, body, #root {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+/* Mobile viewport fix for fullscreen */
+@media screen and (max-width: 768px) {
+	html, body, #root {
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+	}
+	
+	/* Ensure mobile browsers use full viewport */
+	body {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	#root {
+		overflow-y: auto;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
 pre {
 	font-family: inherit;
 }

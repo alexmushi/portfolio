@@ -14,17 +14,39 @@ const Wrapper = styled.div`
 	display: grid;
 	place-items: center;
 	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	height: 100%;
+	width: 100%;
 	background: url(${bg}) no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
+	padding-bottom: 5rem; /* Add space for the dock */
+	box-sizing: border-box;
+	
+	/* Mobile fullscreen optimization */
+	@media screen and (max-width: 768px) {
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+		padding-bottom: 4rem;
+		position: relative;
+	}
 `;
 
 const dimensionConstraints = css`
 	width: 75%;
 	min-width: 70%;
 	min-height: 25%;
-	max-height: 90%;
+	max-height: calc(90vh - 5rem); /* Account for dock space */
 	max-width: 80%;
+	
+	/* Mobile optimization */
+	@media screen and (max-width: 768px) {
+		width: 95%;
+		min-width: 90%;
+		max-width: 95%;
+		max-height: calc(85vh - 4rem);
+		min-height: 40%;
+	}
 `;
 
 const emulatorDimensions = css`
@@ -33,6 +55,15 @@ const emulatorDimensions = css`
 	min-height: 25%;
 	max-height: 75%;
 	max-width: 80%;
+	
+	/* Mobile optimization */
+	@media screen and (max-width: 768px) {
+		width: 95%;
+		min-width: 90%;
+		max-width: 95%;
+		max-height: 70%;
+		min-height: 30%;
+	}
 `;
 
 const Container = styled.div`
