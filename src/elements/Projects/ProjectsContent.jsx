@@ -26,6 +26,10 @@ const Container = styled.div`
   position: relative;
   width: clamp(25rem, 50rem, 90vw);
   max-width: 60rem;
+  
+  @media (max-width: 767px) {
+    width: 95vw;
+  }
 `;
 
 const SectionHeader = styled.h2`
@@ -61,7 +65,13 @@ const ProjectsGrid = styled.div`
   grid-template-columns: 1fr;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 1.25rem auto;
   }
 `;
 
@@ -73,6 +83,23 @@ const ProjectCard = styled.div`
   padding: 1.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: ${props => props.index * 0.1}s;
+  animation-fill-mode: both;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   &:hover {
     background: rgba(42, 105, 194, 0.1);
@@ -238,8 +265,8 @@ const ProjectsContent = () => {
           
           <SectionHeader>Featured Projects</SectionHeader>
           <ProjectsGrid>
-            {projects.map((project) => (
-              <ProjectCard key={project.name}>
+            {projects.map((project, index) => (
+              <ProjectCard key={project.name} index={index}>
                 <ProjectHeader>
                   <ProjectIcon src={project.icon} alt={`${project.name} icon`} />
                   <ProjectTitleSection>
@@ -255,8 +282,8 @@ const ProjectsContent = () => {
                 <ProjectDescription>{project.description}</ProjectDescription>
                 
                 <TechStack>
-                  {project.tech.map((tech, index) => (
-                    <TechBadge key={index}>{tech}</TechBadge>
+                  {project.tech.map((tech, techIndex) => (
+                    <TechBadge key={techIndex}>{tech}</TechBadge>
                   ))}
                 </TechStack>
                 
