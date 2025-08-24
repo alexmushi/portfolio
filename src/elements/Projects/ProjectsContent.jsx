@@ -128,7 +128,7 @@ const ProjectIcon = styled.img`
   height: 3.5rem;
   border-radius: 0.5rem;
   background: #fff;
-  padding: 0.25rem;
+  padding: 0rem;
   box-sizing: border-box;
   flex-shrink: 0;
   object-fit: contain;
@@ -221,7 +221,7 @@ const projects = [
     link: "https://www.notarias38y76.com/", 
     icon: notarias38y76Icon,
     status: "live",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
+    tech: ["React", "Node.js", "MySQL", "Express"],
     type: "Live Site"
   },
   { 
@@ -230,7 +230,7 @@ const projects = [
     link: "https://play.google.com/store/apps/details?id=com.kotlin.sacalabici&pcampaignid=web_share", 
     icon: sacaLaBiciIcon,
     status: "live",
-    tech: ["Kotlin", "Android", "Google Maps API", "Firebase"],
+    tech: ["Kotlin", "Android", "Mapbox API", "Firebase"],
     type: "Mobile App"
   },
   { 
@@ -238,9 +238,10 @@ const projects = [
     description: "University payment portal that consolidated financial information management and streamlined administrative processes for students and staff.", 
     link: "https://www.youtube.com/watch?v=30KhGPoSm20&ab_channel=Aleyuki", 
     icon: viaPagoIcon,
-    status: "demo",
-    tech: ["React", "Node.js", "MySQL", "Payment Integration"],
-    type: "Demo Video"
+    status: "live", 
+    tech: ["Node.js", "MySQL", "Express"],
+    type: "Demo Video",
+    actionText: "🎥 Watch Demo" 
   },
   { 
     name: "Australiapp", 
@@ -248,7 +249,7 @@ const projects = [
     link: "https://github.com/alexmushi/Australiapp", 
     icon: australiappIcon,
     status: "code",
-    tech: ["React", "Node.js", "PostgreSQL", "Currency API"],
+    tech: ["React", "MySQL", "Sequelize", "ExchangeRate API"],
     type: "Source Code"
   }
 ];
@@ -294,9 +295,11 @@ const ProjectsContent = () => {
                     rel="noreferrer"
                     primary
                   >
-                    {project.status === 'live' ? '🚀 Visit Site' : 
-                     project.status === 'demo' ? '🎥 Watch Demo' : 
-                     '💻 View Code'}
+                    {/* --- ✅ MODIFIED: Use custom actionText if it exists, otherwise use default logic --- */}
+                    {project.actionText || 
+                     (project.status === 'live' ? '🚀 Visit Site' : 
+                      project.status === 'demo' ? '🎥 Watch Demo' : 
+                      '💻 View Code')}
                   </ActionButton>
                 </ProjectActions>
               </ProjectCard>
