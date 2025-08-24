@@ -3,6 +3,12 @@ import styled from "styled-components";
 import BodyContent from "@elements/Window/BodyContent";
 import theme from "@styles/theme";
 
+// Import project icons
+import notarias38y76Icon from "@static/notarias38y76.jpeg";
+import sacaLaBiciIcon from "@static/SLB.png";
+import viaPagoIcon from "@static/viapago.png";
+import australiappIcon from "@static/australiapp.png";
+
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
@@ -34,9 +40,10 @@ const MainSection = styled.ol`
     color: #c9cbdb;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
+    gap: 0.75rem;
   }
 
   li {
@@ -70,13 +77,31 @@ const MainSection = styled.ol`
   }
 `;
 
+const ProjectIcon = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+`;
+
+const ProjectContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+`;
+
 const text = "Hi! I’m Alejandro Muñoz Shimano from Querétaro, México. I’m studying Computer Technologies Engineering at ITESM and a Master’s in Information Technology in Cybersecurity at Macquarie Uni. I’m a creative and persistent person with strong leadership skills, able to build solid relationships and communicate effectively in multidisciplinary teams. I enjoy learning on my own initiative and constantly look for ways to grow and add value. Currently, I apply these skills in software development and technology projects, focusing on quality, efficiency, and delivering a great user experience.";
 
 const projects = [
-  { name: "Notarías 38 y 76", description: "An online portal for Notarías 38 y 76 in Querétaro that enables clients to start legal processes online and upload documents for lawyer review, reducing the need for in-person visits and saving 30,000 sheets of paper each month.", link: "https://www.notarias38y76.com/" },
-  { name: "Saca la Bici", description: "Mobile app for Saca la Bici focused on promoting sustainable urban mobility through safe routes and cycling activities in Querétaro. Some of the main functionalities include a social media platform for announcements and events and a map to plan and see in real time the routes.", link: "https://play.google.com/store/apps/details?id=com.kotlin.sacalabici&pcampaignid=web_share" },
-  { name: "ViaPago", description: "Viapago is a payment portal designed to be efficient, maintainable, and intuitive. Its main purpose is to consolidate the financial information management for the Via Diseño's (a university in Querétaro) administration, facilitate access to this information for students, and streamline related processes for both.", link: "https://www.youtube.com/watch?v=30KhGPoSm20&ab_channel=Aleyuki" },
-  { name: "Australiapp", description: "Full-stack React/Node.js application for managing personal budgets and expenses with automatic currency conversion and daily exchange-rate updates.", link: "https://github.com/alexmushi/Australiapp"}
+  { name: "Notarías 38 y 76", description: "An online portal for Notarías 38 y 76 in Querétaro that enables clients to start legal processes online and upload documents for lawyer review, reducing the need for in-person visits and saving 30,000 sheets of paper each month.", link: "https://www.notarias38y76.com/", icon: notarias38y76Icon },
+  { name: "Saca la Bici", description: "Mobile app for Saca la Bici focused on promoting sustainable urban mobility through safe routes and cycling activities in Querétaro. Some of the main functionalities include a social media platform for announcements and events and a map to plan and see in real time the routes.", link: "https://play.google.com/store/apps/details?id=com.kotlin.sacalabici&pcampaignid=web_share", icon: sacaLaBiciIcon },
+  { name: "ViaPago", description: "Viapago is a payment portal designed to be efficient, maintainable, and intuitive. Its main purpose is to consolidate the financial information management for the Via Diseño's (a university in Querétaro) administration, facilitate access to this information for students, and streamline related processes for both.", link: "https://www.youtube.com/watch?v=30KhGPoSm20&ab_channel=Aleyuki", icon: viaPagoIcon },
+  { name: "Australiapp", description: "Full-stack React/Node.js application for managing personal budgets and expenses with automatic currency conversion and daily exchange-rate updates.", link: "https://github.com/alexmushi/Australiapp", icon: australiappIcon }
 ];
 
 const ProjectsContent = () => {
@@ -89,8 +114,11 @@ const ProjectsContent = () => {
             {projects.map((p) => (
               <li key={p.name}>
                 <a href={p.link} target="_blank" rel="noreferrer">
-                  <span>{p.name}</span>
-                  <p>{p.description}</p>
+                  <ProjectIcon src={p.icon} alt={`${p.name} icon`} />
+                  <ProjectContent>
+                    <span>{p.name}</span>
+                    <p>{p.description}</p>
+                  </ProjectContent>
                 </a>
               </li>
             ))}
