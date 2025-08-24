@@ -72,7 +72,7 @@ const ResumeContent = () => {
 				<MainSection>
 					<li>
 						<a
-							href="https://www.linkedin.com/in/alejandro-mu%C3%B1oz-shimano-867740334/"
+							href="https://www.linkedin.com/in/alejandro-shimano/"
 							target="_blank"
 							rel="noreferrer"
 						>

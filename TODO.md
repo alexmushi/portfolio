@@ -14,3 +14,5 @@
 -   [ ] Projects como default
 -   [ ] Agregar videos a cada proyecto
 -   [ ] Traducir videos a ingles (AI?)
+-   [ ] Mostrar popup cada que abras la terminal
+-   [ ] Agregar Australiapp
