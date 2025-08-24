@@ -112,7 +112,7 @@ const InputLine = props => {
 				e.preventDefault();
 			});
 		}
-	}, []);
+	}, [disabled]);
 
 	useEffect(() => {
 		if (!alertHidden) {
