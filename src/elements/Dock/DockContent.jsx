@@ -1,6 +1,5 @@
 import React from "react";
 import "@styles/dock.scss";
-import TerminalIcon from "@static/terminal.png";
 import ContactIcon from "@static/contact.png";
 import FinderIcon from "@static/finder.png";
 import FolderIcon from "@static/folder.png";
@@ -18,25 +17,16 @@ const DockContent = () => {
 						<ul>
 							<Link to="/">
 								<li
-									data-title="Home"
+									data-title="Projects"
 									className="full-width-icon"
 								>
 									<img
-										src={TerminalIcon}
+										src={FinderIcon}
 										className="img-fluid"
 										alt="mac"
 									/>
 								</li>
 							</Link>
-								<Link to="/projects">
-									<li data-title="Projects">
-										<img
-											src={FinderIcon}
-											className="img-fluid"
-											alt="mac"
-										/>
-									</li>
-								</Link>
 							<div className="separator" />
 								<Link to="/resume">
 									<li data-title="Resume">
