@@ -15,9 +15,19 @@ const Wrapper = styled.div`
   display: grid;
   place-items: center;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
+  height: 100%;
+  width: 100%;
   background: url(${bg}) no-repeat center center;
   background-size: cover;
   overflow: hidden;
+  
+  /* Mobile fullscreen optimization */
+  @media screen and (max-width: 768px) {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    position: relative;
+  }
 `;
 
 const Container = styled.div`
@@ -29,6 +39,14 @@ const Container = styled.div`
   backdrop-filter: blur(1rem);
   background: ${theme.bodyBgWithOpacity};
   ${(props) => props.height && `height: ${props.height}`}
+  
+  /* Mobile optimization */
+  @media screen and (max-width: 768px) {
+    width: 95vw;
+    max-width: 95vw;
+    max-height: 85vh;
+    min-height: 40vh;
+  }
 `;
 
 const Footer = styled.div`
